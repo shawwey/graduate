@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>福大助研之家</title>
+	<link rel="stylesheet" href="css/base.css"  media="all">
+	<link rel="stylesheet" href="js/layui/css/layui.css"  media="all">
+	<link rel="icon" href="images/6.jpg">
+	<style type="text/css">
+		.mainbody{background: url(./images/bg.jpg) no-repeat;background-size: cover;}
+	</style>
+</head>
+<body class="">
+	<div class="login-main">
+	    <header class="layui-elip">登  录</header>
+	    <form class="layui-form">
+	        <div class="layui-input-inline">
+	            <input type="text" name="account" required  lay-verify="required" placeholder="账号" autocomplete="off" class="layui-input">
+	        </div>
+	        <div class="layui-input-inline">
+	            <input type="password" name="password" required  lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
+	        </div>
+	        <div class="layui-input-inline login-btn">
+	            <button type="submit" class="layui-btn" id="savebtn">登录</button>
+	        </div>
+	        <hr/>
+	       <!--  <div class="layui-input-inline">
+	            <button type="button" class="layui-btn layui-btn-primary">QQ登录</button>
+	        </div>
+	        <div class="layui-input-inline">
+	            <button type="button" class="layui-btn layui-btn-normal">微信登录</button>
+	        </div> -->
+	        <p><a href="javascript:;" class="fl">立即注册</a><a href="javascript:;" class="fr">忘记密码？</a></p>
+	    </form>
+	</div>
+<script type="text/javascript" src="js/layui/layui.js"></script>
+<script type="text/javascript">
+	layui.use(['jquery', 'layer','element'], function(){ 
+	  var $ = layui.$ //重点处
+	  ,layer = layui.layer;
+	  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+	  $("#savebtn").click(function(){
+        	window.location.href="main.html";
+      });
+	  
+	  // //后面就跟你平时使用jQuery一样
+	  // $('body').append('hello jquery');
+	});
+// 	layui.use('element', function(){
+//   var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+//   //监听导航点击
+//   element.on('nav(demo)', function(elem){
+//     //console.log(elem)
+//     layer.msg(elem.text());
+//   });
+// });
+   /* layui.use(['form'], function () {
+        var form = layui.form(), $ = layui.jquery;
+        $("#savebtn").click(function(){
+        	window.location.href="main.html";
+        })
+    });*/
+</script>
+	</body>
+</html>
